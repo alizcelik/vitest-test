@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`shallow merge with overlaps 1`] = `
+{
+  "github": "aliozclk",
+  "name": "Ali",
+  "twitter": "aliozclk99",
+}
+`;

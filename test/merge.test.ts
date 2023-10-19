@@ -29,11 +29,7 @@ test("shallow merge with overlaps", () => {
     }
   );
 
-  expect(merged).toEqual({
-    name: "Ali",
-    github: "aliozclk",
-    twitter: "aliozclk99",
-  });
+  expect(merged).toMatchSnapshot();
 });
 
 test("shallow merge with arrays", () => {
@@ -49,22 +45,31 @@ test("deep merge with overlaps", () => {
       accounts: {
         github: "unknown",
       },
+      languages: ["javascript"],
     },
     {
       accounts: {
         github: "aliozclk",
         twitter: "aliozclk99",
       },
+      languages: ["typescript", "vue"],
     }
   );
 
-  expect(merged).toEqual({
-    name: "Ali",
-    accounts: {
-      github: "aliozclk",
-      twitter: "aliozclk99",
-    },
-  });
+  expect(merged).toMatchInlineSnapshot(`
+    {
+      "accounts": {
+        "github": "aliozclk",
+        "twitter": "aliozclk99",
+      },
+      "languages": [
+        "javascript",
+        "typescript",
+        "vue",
+      ],
+      "name": "Ali",
+    }
+  `);
 });
 
 test("throws error when merging arrays with objects", () => {

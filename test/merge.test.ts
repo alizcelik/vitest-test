@@ -66,3 +66,9 @@ test("deep merge with overlaps", () => {
     },
   });
 });
+
+test("throws error when merging arrays with objects", () => {
+  expect(() => deepMerge(["foo", "bar"], { foo: "bar" })).toThrowError(
+    "Can not merge two differnet types"
+  );
+});

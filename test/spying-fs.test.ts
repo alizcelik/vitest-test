@@ -16,5 +16,5 @@ vi.mock("fs", async () => {
 
 test("with fs", async () => {
   const result = await loadConfig();
-  expect(result).toEqual({ name: "from fs" });
+  expect(result).toEqual({ name: "mocked" });
 });

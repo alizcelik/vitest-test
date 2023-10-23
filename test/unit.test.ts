@@ -5,5 +5,5 @@ test("this is a simple test does not need DOM", () => {
 });
 
 test("make sure DOM is not available", () => {
-  expect(document).toBe(undefined);
+  expect(typeof document).toBe("undefined");
 });

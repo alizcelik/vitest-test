@@ -11,8 +11,9 @@
   "license": "ISC",
   "devDependencies": {
     "@types/vue": "^2.0.0",
+    "@vitejs/plugin-vue": "^4.4.0",
     "happy-dom": "^12.9.1",
-    "vue": "^3.3.5"
+    "vue": "^3.3.6"
   },
   "dependencies": {
     "vitest": "^0.34.6"
